@@ -1,0 +1,105 @@
+/* ~~~~~~~~ Service Section ~~~~~~~~ */
+/* /* Service Container */
+/* .service__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem 0;
+ */
+
+/* #service-section {
+  background-color: hsl(var(--clr-main));
+  border: 3px solid hsl(var(--clr-green-400) / 0.5);
+} */
+
+#service-section {
+  margin-top: 0;
+}
+
+.service__container {
+  max-width: max-content;
+  padding: 0 1rem;
+}
+
+.service__desc {
+  max-width: 70ch;
+  text-align: center;
+  margin-block: -0.5rem;
+}
+
+.service__cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 1rem 1.5rem;
+  margin-top: 30px;
+  padding-inline: 0rem;
+  /* background-color: hsl(var(--clr-main)); */
+}
+
+.service__card {
+  position: relative;
+  padding: 2rem 1.4rem 1.4rem;
+  background-color: hsl(var(--clr-white));
+  border-radius: 18px;
+  border: 1px solid transparent;
+  outline: none;
+  transition: all 0.3s ease-out;
+}
+
+.service__card:hover {
+  transform: scale(1.1);
+  border: 1px solid hsl(var(--clr-green-300) / 0.5);
+  border-right: 1px solid hsl(var(--clr-green-300) / 0.2);
+  border-bottom: 1px solid hsl(var(--clr-green-300) / 0.2);
+  box-shadow: var(--shadow-subtle-big);
+}
+
+/* @media (max-width: ) */
+
+.service__card img {
+  position: absolute;
+  left: 1.5rem;
+  top: 15px;
+}
+
+.service__title {
+  /* padding: 10px 45px; */
+  height: 80px;
+  display: flex;
+  align-items: center;
+  /* background-color: antiquewhite; */
+}
+
+.service__card h3 {
+  font-size: min(calc(var(--fs-300) + 0.15rem), 1rem);
+  font-weight: 600;
+  color: hsl(var(--clr-dark));
+  width: 15ch;
+  /* width: 100%; */
+  padding: 10px;
+  margin-left: 120px;
+  /* margin-bottom: 1rem; */
+}
+
+.service__card p {
+  font-size: var(--fs-100);
+  color: hsl(var(--clr-gray));
+  font-weight: 400;
+  text-align: justify;
+  /* margin-top: 20px; */
+  /* margin-bottom: 1rem; */
+  /* background-color: blueviolet; */
+}
+
+@media (596px <= width < 622px) {
+  .service__cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 622px) {
+  .service__cards {
+    padding-inline:  0.8rem;
+  }
+}

@@ -1,0 +1,101 @@
+/* ~~~~~~~~ Partner Section ~~~~~~~~ */
+#business-section,
+#education-section {
+  margin-top: 0;
+}
+
+#business-section {
+  padding-bottom: 0;
+}
+
+#education-section {
+  padding-block: 1rem;
+}
+
+.scroll-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  mask-image: var(--gradient-black-left-right);
+}
+
+.scroll-list {
+  /* border: 1px solid black; */
+  /* min-width: 2250px; */
+  position: relative;
+  height: 100px;
+  display: flex;
+  gap: 50px;
+  margin: 2rem auto;
+  pointer-events: auto;
+}
+
+.scroll-list.edu {
+  gap: 0;
+}
+
+.scroll-list:hover .logo-item {
+  animation-play-state: paused;
+}
+
+@keyframes scrollLeft {
+  to {
+    left: -250px;
+  }
+}
+
+@keyframes scrollRight {
+  from {
+    left: -250px;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+.logo-item {
+  position: absolute;
+  left: 100%;
+  width: 250px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* margin-right: 150px; */
+  /* smooth pause */
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+  /* background-color: black; */
+  /* animation: scrollLeft 50s linear infinite; */
+}
+
+.logo-item.scroll-left {
+  animation: scrollLeft 50s linear infinite;
+}
+
+.logo-item.scroll-right {
+  animation: scrollRight 50s linear infinite;
+}
+
+.logo-item.extra-gap {
+  margin-right: 300px;
+}
+
+.logo-item img {
+  /* background-color: hsl(var(--clr-mint)); */
+  height: 50px;
+  width: auto;
+  /* height: fit-content; */
+  object-fit: cover;
+  margin-bottom: 1rem;
+  /* border-radius: 6px; */
+}
+
+.logo-item p {
+  /* background-color: hsl(var(--clr-mint-light)); */
+  /* height: 100%; */
+  font-size: var(--fs-100);
+  text-align: center;
+  align-content: center;
+}

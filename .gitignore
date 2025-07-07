@@ -1,0 +1,3 @@
+# Ignore dist build folder jika tidak ingin push hasil build
+dist/
+dist-v3.zip

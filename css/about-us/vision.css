@@ -1,0 +1,24 @@
+/* Vision Section */
+#vision {
+  position: relative;
+  /* top: 1.3rem; */
+}
+
+.vision-box {
+  position: relative;
+  max-width: 102ch;
+  height: auto;
+  padding: 1rem 2rem;
+  
+  border-radius: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background: var(--gradient-green-blue);
+}
+
+.vision-box p {
+  font-size: var(--fs-500);
+  font-weight: 500;
+}

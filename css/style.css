@@ -1,0 +1,270 @@
+/* --------------------------- */
+/* Custom Properties           */
+/* --------------------------- */
+
+:root {
+  /* colors */
+  --clr-main: 150 100% 25%;
+  --clr-white: 0 0% 100%;
+  --clr-black: 0 0% 0%;
+  /* Almost White (Background Color)*/
+  --clr-green-100: 154 30% 95%;
+  /* Lighter Green */
+  --clr-green-200: 140 43% 93%;
+  /* Light Green */
+  --clr-green-300: 150 100% 91%;
+
+  --clr-green-400: 143 55% 73%;
+  /* Light Green */
+  --clr-green-500: 150 32% 60%;
+
+  --clr-green-600: 170 34% 16%;
+  /* Dark Green */
+  --clr-green-700: 150 98% 14%;
+  /* Darker Green */
+  --clr-green-800: 144 69% 10%;
+  /* Darkest Green */
+  --clr-green-900: 143 72% 7%;
+  --clr-green-accent: 150 100% 35%;
+  --clr-accent: 143 80% 65%;
+  --clr-dark: 0 0% 12%;
+  --clr-dark-gray: 0 0% 30%;
+  --clr-gray: 0 0% 52%;
+  --clr-gray-100: 0 0% 92%;
+  --clr-gray-200: 0 0% 90%;
+  --clr-gray-300: 0 0% 86%;
+  --clr-gray-400: 0 0% 15%;
+  --clr-gray-500: 0 0% 8%;
+  --clr-gray-600: 0 0% 7%;
+  --clr-gray-700: 0 0% 6%;
+  --clr-gray-800: 0 0% 10%;
+  --clr-gray-900: 0 0% 5%;
+  --clr-mint: 180 100% 90%;
+  --clr-mint-light: 158 100% 94%;
+  --clr-white-off: 0 0% 94%;
+  --clr-green-mute: 150 40% 35%;
+  --clr-green-neon: 150 100% 40%;
+
+  /* Biar tetap 1 baris : 
+      ===== white-space: nowrap; =====
+  */
+
+  --max-width: min(100%, 1200px);
+
+  /* Optional Fluid Spacing (Responsif) */
+  --size-fluid-xs: clamp(0.5rem, calc(0.8vw + 0.5rem), 1.25rem);  /* 8px → 20px */
+  --size-fluid-sm: clamp(0.5rem, calc(2vw + 0.5rem), 2rem);  /* 12px → 32px */
+  --size-fluid-md: clamp(1.5rem, calc(3vw + 0.5rem), 3rem); 
+  --size-fluid-lg: clamp(0.5rem, calc(2vw + 0.8rem), 4rem); /* 32px → 64px */
+  --size-fluid-lg-2: clamp(1.2rem, calc(4vw + 1rem), 4rem); /* 32px → 64px */
+  --size-fluid-xl: clamp(0.5rem, 4.5vw, 5rem); /* 48px → 80px */
+  --size-fluid-xl-2: clamp(1rem, 6vw, 5rem); /* 48px → 80px */
+  --size-fluid-xxl: clamp(1rem, 4vw, 7.2rem); /* 48px → 80px */
+
+  /* font-sizes */
+  /* Fluid Heading Sizes */
+  --fs-900: clamp(2.5rem, calc(4vw + 1.25rem), 6.25rem); /* ~40px → 100px */
+  --fs-800: clamp(2rem, calc(3vw + 1rem), 4rem); /* ~32px → 64px */
+  --fs-700: clamp(2rem, calc(2vw + 1rem), 3rem); /* ~28px → 48px */
+  --fs-600: clamp(1rem, calc(1vw + 1rem), 2rem); /* ~20px → 32px */
+
+  /* Body Text */
+  --fs-500: clamp(1rem, calc(0.5vw + 1rem), 1.5rem); /* 24px - Subheading / Lead text */
+  --fs-400: clamp(var(--fs-100), calc(0.7vw + 0.5rem), 1.125rem);
+  --fs-300: clamp(var(--fs-100), calc(0.6vw + 0.425rem), 1rem);
+  --fs-200: clamp(var(--fs-100), calc(0.7vw + 0.3875rem), 0.875rem);
+  --fs-100: 0.75rem; /* 12px - Micro text / footnotes */
+
+  --fs-900z: 6.25rem;   /*--100px-*/
+  --fs-800z: 4rem;      /*--64px--*/
+  --fs-700z: 3rem;      /*--48px--*/
+  --fs-600z: 2rem;      /*--32px--*/
+  --fs-500z: 1.5rem;    /*--24px--*/
+  --fs-400z: 1.125rem;  /*--18px--*/
+  --fs-300z: 1rem;      /*--16px--*/
+  --fs-200z: 0.875rem;  /*--14px--*/
+  --fs-100z: 0.75rem;   /*--12px--*/
+  --fs-50z: 0.625rem;   /*--10px--*/
+
+  /* Optional: Line height scale */
+  --lh-tight: 1.1;
+  --lh-base: 1.5;
+  --lh-loose: 1.75;
+
+  --br: 30px;
+
+  /* Time */
+  --time1: 200ms ease-in-out;
+  --time2: 300ms ease;
+  --time3: 400ms ease;
+  --time4: 1000ms ease;
+
+  /* font-families */
+  --ff-sans-poppins: "Poppins", sans-serif;
+  --ff-sans-inter: "Inter", sans-serif;
+  --ff-serif-display: "DM Serif Display", serif;
+
+  /* Spacing System - Diturunkan dari --size-xl = 5rem / 80px */
+  --size-none: 0;
+  --size-050: 0.25rem; /* 4px */
+  --size-100: 0.5rem; /* 8px */
+  --size-200: 0.75rem; /* 12px */
+  --size-300: 1rem; /* 16px */
+  --size-400: 1.5rem; /* 24px */
+  --size-500: 2rem; /* 32px */
+  --size-600: 3rem; /* 48px */
+  --size-700: 4rem; /* 64px */
+  --size-800: 5rem; /* 80px */
+
+  /* Gradient Backgrounds */
+  /* --gradient-white-green: linear-gradient(
+    to right,
+    #E8FCEA 0%,
+    #ADF8CA 19%,
+    #AEF5DB 50%,
+    #B0F2ED 74%,
+    #94E0C5 100%
+  ); */
+
+  --gradient-green-blue: linear-gradient(
+    to bottom right,
+    hsl(143, 55%, 73%) 0%,
+    hsl(143, 84%, 83%) 19%,
+    hsl(158, 78%, 82%) 50%,
+    hsl(175, 72%, 82%) 74%,
+    hsl(159, 55%, 73%) 100%
+  );
+
+  --gradient-dark-green: linear-gradient(
+    to bottom right,
+    hsl(var(--clr-main)) 0%,
+    hsl(var(--clr-green-900)) 100%
+  );
+
+  --gradient-green-pastel: linear-gradient(
+    to bottom,
+    hsl(var(--clr-green-400) / 0) 0%,
+    hsl(var(--clr-green-400) / 0.7) 40%,
+    hsl(var(--clr-green-400) / 0.8) 75%,
+    hsl(var(--clr-green-100) / 0) 100%
+  );
+
+  --gradient-black-left-right: linear-gradient(
+    to right,
+    hsl(var(--clr-black) / 0) 0%,
+    hsl(var(--clr-black)) 5%,
+    hsl(var(--clr-black)) 95%,
+    hsl(var(--clr-black) / 0) 100%
+  );
+
+  --gradient-dark: linear-gradient(
+    to bottom right,
+    hsl(var(--clr-green-700) / 0.2),
+    hsl(var(--clr-main) / 0.1),
+    transparent
+  );
+
+  --gradient-rainbow: linear-gradient(
+    to right,
+    #00ffcc,
+    #00ccff,
+    #0099ff,
+    #6666ff,
+    #cc66ff,
+    #ff66cc
+  );
+
+  --gradient-green: linear-gradient(
+    to bottom,
+    hsl(var(--clr-main)) 0%,
+    hsl(var(--clr-main) / 0.9) 20%,
+    hsl(var(--clr-main) / 0.6) 60%,
+    hsl(var(--clr-main) / 0) 100%
+  );
+
+  --shadow-green-bottom: 0px 4px 10px hsl(var(--clr-main));
+  --shadow-green: 0px 0px 20px hsl(var(--clr-main));
+  --shadow-green-big: 0px 0px 40px 10px hsl(var(--clr-main) / 0.8);
+  --shadow: 0 4px 8px hsl(var(--clr-dark) / 0.2);
+  --shadow-subtle-big: 0 25px 45px hsl(var(--clr-black) / 0.1);
+  --shadow-subtle-small: 0 5px 15px hsl(var(--clr-black) / 0.05);
+  --shadow-card: 0px 12px 18px 2px hsl(var(--clr-black) / 0.25);
+  --shadow-text: 0px 6px 18px hsl(var(--clr-black) / 0.25);
+
+  --border-shadowborder: 1px solid hsl(var(--clr-white) / 0.5),
+    0 0 0 1px hsl(var(--clr-white) / 0.5);
+  border-right: none;
+  border-bottom: 1px solid hsl(var(--clr-white) / 0.2);
+}
+/* 
+  42, Section Title
+  40, Connecting People
+  36, USP Title
+  18, USP Desc 65% Dark, Text in Button
+  16, USP Highlight, Text in Best Selling Solution, Text in Category Product
+  16, Section Desc, Gray
+  16, Service card Title
+  12, Service card Desc, Partner Name
+  14, Product Name
+  24, Testimonial Name
+  20, Testimonial Position
+  16, Testimonial Desc
+  30, USP CTA Title
+  */
+
+.poppins-font {
+  font-family: var(--ff-sans-poppins);
+}
+
+.inter-font {
+  font-family: var(--ff-sans-inter);
+}
+
+html {
+  color-scheme: dark light;
+}
+
+/* .dark-mode {
+  colors
+  --clr-main: 150, 95%, 23%;
+  --clr-white: 0 0% 0%;
+  --clr-black: 0 0% 100%;
+
+  --clr-green-100: 150, 19%, 8%;
+  --clr-green-200: 153, 42%, 10%;
+  --clr-green-300: 150, 58%, 13%;
+  --clr-green-400: 150, 72%, 16%;
+  --clr-green-500: 150, 86%, 19%;
+  --clr-green-600: 148, 71%, 29%;
+  --clr-green-700: 146, 51%, 38%;
+  --clr-green-800: 144, 35%, 47%;
+  --clr-green-900: 143, 29%, 56%;
+  --clr-green-accent: 150 100% 35%;
+
+  --clr-gray-100: 0 0% 92%;
+  --clr-gray-200: 0 0% 90%;
+  --clr-gray-300: 0 0% 86%;
+  --clr-gray: 0 0% 42%;
+  --clr-gray-400: 0 0% 50%;
+  --clr-gray-500: 0 0% 40%;
+  --clr-gray-600: 0 0% 30%;
+  --clr-dark-gray: 0 0% 70%;
+  --clr-dark: 0 0% 92%;
+  
+  --clr-mint: 180, 19%, 15%;
+  --clr-mint-light: 156, 19%, 15%;
+  --clr-white-off: 0 0% 16%;
+  --clr-green-mute: 149, 39%, 65%;
+  --clr-green-neon: 150 100% 50%;
+} */
+
+.dark-mode {
+  color-scheme: dark;
+
+  --shadow-subtle-big: 0 25px 45px hsl(var(--clr-black) / 0.5);
+  --shadow-subtle-small: 0 5px 15px hsl(var(--clr-gray-900) / 0.4);
+  --shadow-green-small: 0 5px 10px hsl(var(--clr-main) / 0.3);
+  --shadow-green-medium: 0 10px 20px hsl(var(--clr-main) / 0.4);
+}
+
+/* Light Mode */
